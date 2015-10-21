@@ -195,6 +195,7 @@ class AndroidNotificationMixin(BaseNotificationMixin):
 
     def __init__(self):
         self.android_root_params = None
+        self.android_badges = None
         self.android_sound = None
         self.android_header = None
         self.android_icon = None
@@ -205,7 +206,7 @@ class AndroidNotificationMixin(BaseNotificationMixin):
     def render(self):
         result = {}
         render_attrs(self, result, ('android_root_params', 'android_sound', 'android_header', 'android_icon',
-                                    'android_custom_icon', 'android_banner', 'android_gcm_ttl'))
+                                    'android_custom_icon', 'android_banner', 'android_gcm_ttl', 'android_badges'))
         return result
 
 
